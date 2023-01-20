@@ -54,42 +54,38 @@ const questions = [
 ];
 inquirer.prompt(questions).then((answers) => {
     console.log(JSON.stringify(answers, null, '  '));
-  });
-
-// inquirer.prompt(questions).then((answers) => {
-//     console.log(JSON.stringify(answers, null, '  '));
-// });
+});
 
 
 
 
+// const tableOfContents = ["Table of Contents", "Installation", "Usage", "License", "Contributing", "Tests", "Questions"];
 
-// Table of Contents - create an array to include [ "Table of Contents", "Installation", "Usage", "License", "Contributing", "Tests", "Questions" ]
+// console.log(tableOfContents);
 
-
-// .prompt([
-//     {
-//         type: 'checkbox',
-//         message: 'Select license',
-//         name: 'license',
-//         choices: [
-//             {
-//                 name: 'MIT',
-//             },
-//             {
-//                 name: 'Other',
-//             },
-//             {
-//                 name: 'GPLv2',
-//             },
-//             {
-//                 name: 'Apache',
-//             },]
-//             },
-//           ])
-//           .then((answers) => {
-//             console.log(JSON.stringify(answers, null, '  '));
-//           });
+inquirer.prompt([
+    {
+        type: 'checkbox',
+        message: 'Select license',
+        name: 'license',
+        choices: [
+            {
+                name: 'MIT',
+            },
+            {
+                name: 'Other',
+            },
+            {
+                name: 'GPLv2',
+            },
+            {
+                name: 'Apache',
+            },]
+    },
+])
+    .then((answers) => {
+        console.log(JSON.stringify(answers, null, '  '));
+    });
 
 
 
