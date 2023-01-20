@@ -58,34 +58,33 @@ inquirer.prompt(questions).then((answers) => {
 
 
 
-
+// // array for the table of contents
 // const tableOfContents = ["Table of Contents", "Installation", "Usage", "License", "Contributing", "Tests", "Questions"];
+// // console.log(tableOfContents);
 
-// console.log(tableOfContents);
-
-inquirer.prompt([
-    {
-        type: 'checkbox',
-        message: 'Select license',
-        name: 'license',
-        choices: [
-            {
-                name: 'MIT',
-            },
-            {
-                name: 'Other',
-            },
-            {
-                name: 'GPLv2',
-            },
-            {
-                name: 'Apache',
-            },]
-    },
-])
-    .then((answers) => {
-        console.log(JSON.stringify(answers, null, '  '));
-    });
+// inquirer.prompt([
+//     {
+//         type: 'checkbox',
+//         message: 'Select license',
+//         name: 'license',
+//         choices: [
+//             {
+//                 name: 'MIT',
+//             },
+//             {
+//                 name: 'Other',
+//             },
+//             {
+//                 name: 'GPLv2',
+//             },
+//             {
+//                 name: 'Apache',
+//             },]
+//     },
+// ])
+//     .then((answers) => {
+//         console.log(JSON.stringify(answers, null, '  '));
+//     });
 
 
 
@@ -100,22 +99,22 @@ inquirer.prompt([
 
 // When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
 
-// Getting Started
-// Here are some guidelines to help you get started:
-
-//// Create a .gitignore file and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub. Be sure to create your .gitignore file before installing any npm dependencies.
-
-// Make sure that your repo includes a package.json with the required dependencies. You can create one by running npm init when you first set up the project, before installing any dependencies.
-
 
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data,
+        (err) => err ? console.log(err) : console.log('Success!'));
 }
 
 // function to initialize program
 function init() {
-
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            writeToFile("README.md", generateMarkdown(response));
+        }
+        );
 }
 
 // function call to initialize program
