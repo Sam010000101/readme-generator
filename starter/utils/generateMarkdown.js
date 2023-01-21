@@ -1,5 +1,6 @@
 // function to generate markdown for README
 // When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
+// When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
 function generateMarkdown(data) {
   return `# ${data.project_title}
   ## Description
@@ -23,12 +24,13 @@ function generateMarkdown(data) {
   ${data.contributing}
   ## Questions
   You can direct any questions that you may have regarding this project to; \n
-  ${'* ' + 'GitHub: ' + '[' + data.github_username + ']' + '(https://github.com/' + data.github_username +')'} \n
-  ${'* ' + 'Email: ' + data.email_address}
+  ${'- ' + 'GitHub: ' + '[' + data.github_username + ']' + '(https://github.com/' + data.github_username +')'}
+  ${'- ' + 'Email: ' + data.email_address}
   ## Deployed Site URL
   ${data.deployed_site_url}
   ## License
-  ${data.license}
+  This project is covered by the ${data.license} license. \n
+  ${data.insert_license_text}
 
 `;
 }
