@@ -3,6 +3,8 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+
 // array of questions for user
 const questions = [
     {
@@ -13,36 +15,34 @@ const questions = [
     {
         type: 'input',
         name: 'project_description',
-        message: 'Provide a description of your project',
+        message: 'Describe the project',
     },
     {
         type: 'input',
         name: 'installation_instructions',
-        message: 'Provide Installation Instructions for your project',
+        message: 'Provide Installation Instructions for the project',
     },
 
     {
         type: 'input',
         name: 'usage_information',
-        message: 'Provide Usage Information for your project',
+        message: 'Provide Usage Information for the project',
     },
 
     {
         type: 'input',
         name: 'contributing',
-        message: 'Provide Contributor/s for your project',
+        message: 'Provide details for the project Contributor/s',
     },
-
     {
         type: 'input',
         name: 'tests',
-        message: 'Details of any testing requirements',
+        message: 'Provide details of any test instructions',
     },
-
     {
         type: 'input',
         name: 'questions',
-        message: 'Where to direct any questions',
+        message: 'Where should users direct their questions?',
     },
 
     {
@@ -50,12 +50,26 @@ const questions = [
         name: 'deployed_site_url',
         message: 'Provide the URL for your deployed site',
     },
+        {
+        type: 'checkbox',
+        message: 'Select license',
+        name: 'license',
+        choices: [
+            {
+                name: 'MIT',
+            },
+            {
+                name: 'Other',
+            },
+            {
+                name: 'GPLv2',
+            },
+            {
+                name: 'Apache',
+            },]
+    }
 
 ];
-inquirer.prompt(questions).then((answers) => {
-    console.log(JSON.stringify(answers, null, '  '));
-});
-
 
 
 // // array for the table of contents
@@ -89,7 +103,7 @@ inquirer.prompt(questions).then((answers) => {
 
 
 
-// When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+
 
 // When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
@@ -105,6 +119,7 @@ inquirer.prompt(questions).then((answers) => {
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,
         (err) => err ? console.log(err) : console.log('Success!'));
+        console.log(data.title);
 }
 
 // function to initialize program
@@ -113,9 +128,11 @@ function init() {
         .prompt(questions)
         .then((response) => {
             writeToFile("README.md", generateMarkdown(response));
+            console.log(response);
         }
         );
-}
+    }
+
 
 // function call to initialize program
 init();
