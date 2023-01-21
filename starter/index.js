@@ -109,6 +109,19 @@ const questions = [
 
 // When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
+// https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+
+const licenseBadges = [
+    {
+        license: 'MIT',
+        badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    },
+    {
+        license: 'GPL v3',
+        badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+    }
+]
 
 // function to write README file
 function writeToFile(fileName, data) {
