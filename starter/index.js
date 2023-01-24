@@ -107,9 +107,9 @@ const questions = [
 ];
 
 
-// When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// // When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
-// https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+// // https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 
 const licenseBadges = [
@@ -121,7 +121,36 @@ const licenseBadges = [
         license: 'GPL v3',
         badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
     }
-]
+];
+
+// if (questions.license === 'MIT')
+// console.log('MIT');
+console.log(questions[9].choices);
+
+// .then((response) =>
+// {if (licenseB.badge == "MIT") 
+//     licenseB.badge;
+// }) 
+
+// // function asignBadge(licenseBadges) {
+// //     if (data.license == 'MIT') {
+// //         badge == licenseBadges[0].badge
+// //       console.log(badge);
+// //     }
+// // }
+
+// const chosenLicenseBadge = licenseBadges.map(badge => {
+//     // Copy the object being iterated over
+//     const licenseB = { badge };
+//     // Do everything else the same
+//     if (licenseB.badge == "MIT") {
+//         licenseB.badge;
+//     } 
+//     // Be sure to return the new obj, not the parameter
+//     return licenseB;
+//   });
+
+// // licenseBadges.forEach(license => console.log(license.badge));
 
 // function to write README file
 function writeToFile(fileName, data) {
