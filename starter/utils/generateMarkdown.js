@@ -3,6 +3,9 @@
 // When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
 function generateMarkdown(data) {
   return `# ${data.project_title}
+  
+  ${data.badges}
+
   ## Description
   ${data.project_description}
  ## Table of Contents
