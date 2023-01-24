@@ -1,91 +1,56 @@
-# Module 11 Challenge: Professional README Generator
+# Readme Generator
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Your Task
+This readme was generated using the Readme Generator
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project. 
+  ## Description
+  Generate a Readme.md file using node.js on the command-line, simply provide answers to prompts that request information pertaning to a typical readme structure. Once all prompts have been answered a Readme is generated which contains all the info provided. This allows you to spend less time on the Readme and more time coding!
+ ## Table of Contents
+ * [Installation](#installation) 
+ * [Usage](#usage) 
+ * [Tests](#tests) 
+ * [Contributing](#contributing) 
+ * [Questions](#questions) 
+ * [Deployed Site URL](#deployed-site-url) 
+ * [License](#license) 
 
-You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+  ## Installation
+  Copy the repo using 'git pull, then open the repo in your chosen IDE and run node.js (install node.js if not installed). Install all dependancies using 'npm i', which will install all dependancies as detailed in the package.json file. Then open the index.js in the integrated Terminal and use command 'node index' to start the prompts that will generate the readme.md.
+  ## Usage
+  When prompted enter the requested information and press Enter to move to he next prompt, continue this process until all prompts have been answered. The Readme.md file will then be generated and saved to the maindirectory.
+  ## Tests
+  n/a
+  ## Contributing
+  Sam Brooke
+  ## Questions
+  You can direct any questions that you may have regarding this project to; 
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain. 
+  - GitHub: [Sam010000101](https://github.com/Sam010000101)
+  - Email: reposme@outlook.com
+  ## Deployed Site URL
+  https://sam010000101.github.io/readme-generator/
+  ## License
+  This project is covered by the MIT license. 
 
-The application will be invoked by using the following command:
+  Copyright (c) 2023 Sam Brooke
 
-```bash
-node index.js
-```
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
 
-## User Story
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
 
-* As a developer, I want a README generator so that I can quickly create a professional README for a new project
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Acceptance Criteria
-
-* Create a command-line application that accepts user input.
-  * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
-    * The title of my project 
-    * Sections entitled:
-      * Description 
-      * Table of Contents 
-      * Installation 
-      * Usage 
-      * License 
-      * Contributing 
-      * Tests 
-      * Questions
-    * When a user enters the project title then it is displayed as the title of the README
-    * When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-    * When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled **License** that explains which license the application is covered under
-    * When a user enters their GitHub username then this is added to the section of the README entitled Questions, with a link to their GitHub profile
-    * When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
-    * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
-
-## Getting Started
-
-Here are some guidelines to help you get started:
-
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
-
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
-
-## Grading Requirements
-
-This Challenge is graded based on the following criteria: 
-
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Technical Acceptance Criteria: 55%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-### Repository Quality: 25%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to walkthrough video.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
